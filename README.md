@@ -12,7 +12,7 @@ the maximum approvable amount based on the applicant's credit profile.
 2. If applicant has debt → immediate rejection
 3. If no debt → credit score is calculated:
    `credit_score = (credit_modifier / loan_amount) * loan_period`
-4. Engine searches for the **maximum approvable amount**
+4. Engine searches for the maximum approvable amount that does not exceed the allowed range.
 5. If no amount works within the requested period → period is extended up to 60 months
 6. If nothing works even at max period → rejection
 
@@ -44,5 +44,19 @@ http://localhost:5173
 2. 49002010976 - segment 1 (modifier = 100)
 3. 49002010987 - segment 2 (modifier = 300)
 4. 49002010998 - segment 3 (modifier = 1000)
+
+## Constraints: 
+Minimum input and output sum can be 2000 € 
+Maximum input and output sum can be 10000 € 
+Minimum loan period can be 12 months 
+Maximum loan period can be 60 months 
+
+## What I would improve?
+The requested loan amount has minimal influence on the final decision. The engine always searches for the maximum approvable amount regardless of what the user request.
+I would improve this by introducing a preference weight, trying to stay as close to the requested amount as possible when multiple valid amounts exist, rather than always returning the maximum. This would make the engine feel more realistic, as in real life a bank would consider the customer's actual needs rather than always offering the largest possible sum.
+Additionally, I would add unit tests for the decision service to verify all scenarios.
+
+
+
 
 
