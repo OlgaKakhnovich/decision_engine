@@ -46,10 +46,10 @@ http://localhost:5173
 4. 49002010998 - segment 3 (modifier = 1000)
 
 ## Constraints: 
-Minimum input and output sum can be 2000 € 
-Maximum input and output sum can be 10000 € 
-Minimum loan period can be 12 months 
-Maximum loan period can be 60 months 
+- Minimum input and output sum can be 2000 € 
+- Maximum input and output sum can be 10000 € 
+- Minimum loan period can be 12 months 
+- Maximum loan period can be 60 months 
 
 ## What I would improve?
 The requested loan amount has minimal influence on the final decision. The engine always searches for the maximum approvable amount regardless of what the user request.
