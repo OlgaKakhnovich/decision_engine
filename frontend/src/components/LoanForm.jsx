@@ -59,7 +59,7 @@ export const LoanForm = () => {
                         <input style={{ fontSize: 16, padding: "5px", backgroundColor: "#c4cdf6ff", borderRadius: "5px", borderColor: "#2b3053ff" }}
                             type="number" min="2000" max="10000" step="100" value={loanAmount} onChange={(e) => setLoanAmount(e.target.value)} />
                     </div>
-                    <div style={{ display: "flex", gap: "2px", flexDirection: "column", gap: "2px" }}>
+                    <div style={{ display: "flex", gap: "2px", flexDirection: "column" }}>
                         <label htmlFor="">Loan period (months):</label>
                         <input style={{ fontSize: 16, padding: "5px", backgroundColor: "#c4cdf6ff", borderRadius: "5px", borderColor: "#2b3053ff" }}
                             type="number" min="12" max="60" step="1" value={loanPeriod} onChange={(e) => setLoanPeriod(e.target.value)} />
